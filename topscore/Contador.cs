@@ -11,9 +11,9 @@ namespace topscore
     class Contador
     {
         private string _path = Application.StartupPath + "\\Resources\\Texto.txt";
-        private int _topscore;
-        private int _pontos;
-        private int _tempo = 60;
+        private int _topscore = 0;
+        private int _pontos = 0;
+        private int _tempo = 5;
 
         public string Score()
         {
@@ -27,7 +27,7 @@ namespace topscore
 
         public string Time()
         {
-            if(_tempo > 0)
+            if (_tempo > 0)
             {
                 _tempo -= 1;
             }
@@ -43,8 +43,19 @@ namespace topscore
 
         public string ResetT()
         {
-            _tempo = 60;
+            _tempo = 5;
             return _tempo.ToString();
         }
+
+        public string TopScore()
+        {
+            if (_pontos > _topscore)
+            {
+                _topscore = _pontos;
+            }
+
+            return _topscore.ToString();
+        }
+
     }
 }

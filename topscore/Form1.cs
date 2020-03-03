@@ -32,6 +32,7 @@ namespace topscore
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            label3.Text = conta.TopScore();
             timer1.Stop();
             label1.Text = conta.ResetP();
             label4.Text = conta.ResetT();
