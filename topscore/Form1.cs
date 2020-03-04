@@ -21,6 +21,7 @@ namespace topscore
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            conta.Move(sender);
             label1.Text = conta.Score();
             timer1.Start();
         }
@@ -28,6 +29,8 @@ namespace topscore
         private void Timer1_Tick(object sender, EventArgs e)
         {
             label4.Text = conta.Time();
+            conta.Gravar();
+            label3.Text = conta.Ler;
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -36,6 +39,7 @@ namespace topscore
             timer1.Stop();
             label1.Text = conta.ResetP();
             label4.Text = conta.ResetT();
+            conta.ResetO(button1);
         }
     }
 }
