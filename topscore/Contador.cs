@@ -13,7 +13,7 @@ namespace topscore
     {
         private static string _path = Application.StartupPath + "\\Resources\\Texto.txt";
         private int _pontos = 0;
-        private int _tempo = 5;
+        private int _tempo = 10;
         private int _topscore = Int32.Parse(File.ReadAllText(_path));
 
         public string Score()
@@ -44,7 +44,7 @@ namespace topscore
 
         public string ResetT()
         {
-            _tempo = 5;
+            _tempo = 10;
             return _tempo.ToString();
         }
 
@@ -72,7 +72,7 @@ namespace topscore
             if (_tempo > 0)
             {
                 Random r = new Random();
-                int _x = int.Parse(r.Next(500).ToString());
+                int _x = int.Parse(r.Next(700).ToString());
                 int _y = int.Parse(r.Next(100).ToString()) + 100;
                 Point pt = new Point(_x, _y);
                 Button b = (Button)sender;

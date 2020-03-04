@@ -22,8 +22,8 @@ namespace topscore
         private void Button1_Click(object sender, EventArgs e)
         {
             conta.Move(sender);
-            label1.Text = conta.Score();
             timer1.Start();
+            label1.Text = conta.Score();
         }
 
         private void Timer1_Tick(object sender, EventArgs e)
