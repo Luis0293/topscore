@@ -40,6 +40,7 @@ namespace topscore
             label1.Text = conta.ResetP();
             label4.Text = conta.ResetT();
             conta.ResetO(button1);
+            
         }
     }
 }
