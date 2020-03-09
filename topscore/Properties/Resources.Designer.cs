@@ -63,9 +63,9 @@ namespace topscore.Properties {
         /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a .
         /// </summary>
-        internal static string Texto {
+        internal static string Topscore {
             get {
-                return ResourceManager.GetString("Texto", resourceCulture);
+                return ResourceManager.GetString("Topscore", resourceCulture);
             }
         }
     }
